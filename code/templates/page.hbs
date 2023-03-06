@@ -1,0 +1,46 @@
+{{!< default}}
+<section id="main-body">
+<div class="container">
+
+	<div class="row">
+		<div class="col-xs-12 col-md-8">
+            <div class="posts-card">
+			
+                        <div class="row">
+                                <article class="col-md-12 post-one">
+                                    {{#post}}
+                                    <div class="postone-title">
+                                        <h1><a href="{{url}}" alt="{{{title}}}" title="{{{title}}}">{{{title}}}</a></h1>
+                                    </div> 
+                                    <br>
+
+                                    <div class="post-image col-xs-12 col-md-12">
+
+                                        <div class="post-content-excerpt">
+                                            {{content}}
+                                        </div>
+
+                                    </div>                                   
+                                    {{/post}}    
+                                </article>
+                            </div>
+
+            </div>
+			
+		</div>
+        <div class="col-xs-12 col-md-4">    
+                        <div class="social-media-responsive cp-sidebar">
+                            <section class="widget">
+                                <span><h5>Social Media</h5></span>  <br><br><br>
+                                <a href="https://www.facebook.com/aptoide" target="_blank"><img src="{{asset "images/facebook.png"}}"></a>
+                                <a href="https://www.youtube.com/user/aptoide" target="_blank"><img src="{{asset "images/youtube.png"}}"></a>
+                                <a href="https://twitter.com/aptoide" target="_blank"><img src="{{asset "images/twitter.png"}}"></a>
+                                <a href="https://www.instagram.com/aptoideteam" target="_blank"><img src="{{asset "images/instagram.png"}}"></a>
+                            </section>
+                        </div>
+                    </div>
+		{{> sidebar}}
+
+    </div>
+</div>
+</section>

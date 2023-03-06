@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "grunt-compile-handlebars": "^2.0.2",
+    "handlebars": "^4.7.7"
+  },
+  "devDependencies": {
+    "grunt-contrib-handlebars": "^3.0.0"
+  }
+}

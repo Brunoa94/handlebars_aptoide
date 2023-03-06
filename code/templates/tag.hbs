@@ -1,0 +1,22 @@
+{{!< default}}
+{{! tag page header }}
+<section id="tag-header" class="tag-header {{#if tag.feaure_image}}" style="background-image: url({{tag.feature_image}}) {{else}}" style="background-image: url({{@site.cover_image}}) {{/if}}">
+	<div class="container">
+		<div class="row">
+		<div class="light-overlay"></div>
+			<div class="col-md-6 tag-header-text">
+				<h4>Showing Posts Tagged as <div class="tag-name-header">"{{tag.name}}"</div></h4>
+				<p class="tag-description">
+					{{#if tag.description}}
+						{{tag.description}}
+					{{/if}}
+				</p>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+
+{{! The main body post loop }}
+{{> "loop"}}

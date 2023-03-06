@@ -1,0 +1,20 @@
+{
+	"name": "chopstick",
+	"version": "1.1.0",
+	"author": {
+		"email": "hello@example.com"
+	},
+	"keywords": [
+		"ghost-theme"
+	],
+	"config": {
+		"posts_per_page": 3
+	},
+	"dependencies": {
+		"fs": "^0.0.1-security",
+		"handlebars": "^4.7.7"
+	},
+	"devDependencies": {
+		"grunt-contrib-handlebars": "^3.0.0"
+	}
+}

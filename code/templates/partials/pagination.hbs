@@ -1,0 +1,9 @@
+<nav class="pagination" role="navigation">
+    {{#if prev}}
+        <a href="{{page_url prev}}" title="Back"><img src="{{asset "images/arrow.png"}}" alt="Back"></a>
+    {{/if}}
+    <span class="page-number"> {{page}} of {{pages}} </span>
+    {{#if next}}
+        <a href="{{page_url next}}" title="Next"><img src="{{asset "images/arrow-2.png"}}" alt="Next"></a>
+    {{/if}}
+</nav>
