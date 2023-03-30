@@ -1,0 +1,45 @@
+<header>
+	{{! branding }}
+	<section id="cp-branding" class="cp-branding">
+		<div class="container">
+			<div class="row top-header">
+				{{! logo }}
+				<div class="pull-left">
+                    <!-- start logo -->
+                    {{#if @site.logo}}
+                    <a class="logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}"></a>
+                    {{else}}
+                    <a class="logo" href="{{@site.url}}"><h1>{{@site.title}}</h1></a>
+                    {{/if}}
+                    <!-- end logo -->
+                </div>
+                <h1>
+                <a class="logo" href="{{@site.url}}">
+                </a>
+                </h1>
+                <div class="pull-right">
+                    <div class="search-form-header col-xs-12 col-md-6">
+                            <form name="search-form" class="navbar-form navbar-right cp-post-search" role="search" action="{{@site.url}}/search" method="get">
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <input type="text" class="form-control cp-search" id="search-field" placeholder="Search...">
+                                  <div class="input-group-addon cp-search-icon" onclick="searchSubmit();" id="search-form-mag"><i class="glyphicon glyphicon-search"></i></div>
+                                </div>
+                              </div>
+                              <div id="search-results" class="search-results"></div>
+                                <input type="submit" style="visibility: hidden;height:1px;width:1px;" onClick="document.forms['search-form'].submit();" />
+                            </form>
+                        </div>
+                    <div class="social-media-header col-xs-12 col-md-6">
+                            <a href="https://www.facebook.com/aptoide" target="_blank" title="Facebook"><img src="{{asset "images/facebook.png"}}" alt="Facebook"></a>
+                                <a href="https://www.youtube.com/user/aptoide" target="_blank" title="Youtube"><img src="{{asset "images/youtube.png"}}" alt="Youtube"></a>
+                                <a href="https://twitter.com/aptoide" target="_blank" title="Twitter"><img src="{{asset "images/twitter.png"}}" alt="Twitter"></a>
+                                <a href="https://www.instagram.com/aptoideappstore" target="_blank" title="Instagram"><img src="{{asset "images/instagram.png"}}" alt="Instagram"></a>
+                                <a href="https://www.snapchat.com/add/aptoideteam" target="_blank" title="Snapchat"><img src="{{asset "images/snapchat.png"}}" alt="Snapchat"></a>
+                                <a href="https://plus.google.com/+AptoideOfficial" target="_blank" title="Google Plus"><img src="{{asset "images/google.png"}}" alt="Google Plus"></a>
+                        </div>
+                </div>
+			</div>
+		</div>
+	</section>
+</header>

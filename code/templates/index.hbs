@@ -1,3 +1,18 @@
-{{!< default}}
-{{! The tag below includes the post loop }}
-{{> "loop"}}
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/style-v10.css" />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/css/normalize.css" />
+    </head>
+    <body>
+        {{!< default}}
+        {{! The tag below includes the post loop }}
+        {{> "header"}}
+        {{> "loop"}}
+        {{> "footer"}}
+    </body>
+</html>

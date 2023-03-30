@@ -2,7 +2,7 @@ const handlebars = require("handlebars");
 const fs = require("fs");
 
 // Read the Handlebars template file
-const source = fs.readFileSync("./home.hbs", "utf-8");
+const source = fs.readFileSync("./index.hbs", "utf-8");
 handlebars.registerPartial(
   "loop",
   fs.readFileSync("./partials/loop.hbs", "utf8"),
@@ -106,7 +106,7 @@ handlebars.registerHelper("asset", function (path) {
 });
 
 handlebars.registerHelper("img_url", function (filename) {
-  return "/images/" + filename;
+  return "assets/images/" + filename;
 });
 // Compile the Handlebars template
 const template = handlebars.compile(source);
@@ -114,11 +114,12 @@ const template = handlebars.compile(source);
 // Define the data to pass to the template
 const data = {
   title: "My Handlebars Project",
+  url: "/aptoide-logo.svg",
   posts: [
     {
       title: "Best Android Games of November",
-      feature_image:
-        "https://blog.aptoide.com/content/images/2022/12/APTOIDE-BLOG_NOV-2022-GOTW_1200X630.png",
+      feature_image: "mobile.png",
+      categories: ["Android Apss", "Android"],
     },
   ],
 };

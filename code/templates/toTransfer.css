@@ -1,0 +1,17 @@
+.aptoide-blog-title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    color: #FE6446;
+}
+
+.post-title-anchor{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #171717;
+}
