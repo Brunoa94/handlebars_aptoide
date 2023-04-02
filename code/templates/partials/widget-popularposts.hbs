@@ -1,17 +1,27 @@
 <!-- start widget -->
-<section class="widget">
-	<span><h5>Popular Posts</h5></span>  <br><br>
-
-{{#get "posts" limit="all" filter="featured:true"}}
-    {{#foreach posts}}
-        <div class="widget-posts-title">
-            <a href="{{url absolute="true"}}">{{title}}</a>
-        </div>
-        <div class="post-content-excerpt-widget">
-            {{excerpt words="10"}}...
-        </div>
-    {{/foreach}}
-{{/get}}
-
+<section class="sidebar-widget">
+    <span id="popular-posts" class="sidebar-subtitle">Popular Posts</span>
+    <div class="widget-posts-title">
+        <a href="">alskmadlkasmdlaksdmalksdmalskdma</a>
+    </div>
+    <span class="post-content-excerpt-widget">
+        lakdmsldkasmdlaksmdlaskmdlasmdlaskmdlask
+    </span>
+    <div class="widget-posts-title">
+        <a href="">alskmadlkasmdlaksdmalksdmalskdma</a>
+    </div>
+    <span class="post-content-excerpt-widget">
+        lakdmsldkasmdlaksmdlaskmdlasmdlaskmdlask
+    </span>
+    {{#get "posts" limit="all" filter="featured:true"}}
+        {{#foreach posts}}
+            <div class="widget-posts-title">
+                <a href="{{url absolute="true"}}">{{title}}</a>
+            </div>
+            <span class="post-content-excerpt-widget">
+                {{excerpt}}
+            </span>
+        {{/foreach}}
+    {{/get}}
 </section>
 <!-- end widget -->

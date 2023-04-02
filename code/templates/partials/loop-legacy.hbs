@@ -1,0 +1,74 @@
+{{! main body post loop }}
+<section id="main-body">
+<div class="container">
+    <div id="aptoide-title-container">
+        <span class="aptoide-blog-title">Aptoide official</span>
+        <span class="aptoide-blog-title" id="blog-title"> Blog</span>
+    </div>
+	<div class="row">
+		<div class="col-xs-12 col-md-8">
+            <div class="posts-card">
+			{{#foreach posts limit=@site.posts_per_page}}
+                        <div class="row">
+                                <article class="col-md-12 post-one">
+                                    <div class="postone-title">
+                                        <h2><a href="{{url}}" alt="{{{title}}}" title="{{{title}}}">{{{title}}}</a></h2>
+                                    </div> 
+                                    <br>
+                                    <div class="meta-info col-xs-12 col-md-12">
+                                        <span class="date">
+                                            <i class="fa fa-clock-o"></i>
+                                            {{date format="MMM DD, YYYY"}}
+                                        </span>
+                                        <br>
+                                        <span class="comment">
+                                            <i class="fa fa-comment"></i>
+                                            <a href="{{url absolute="true"}}#disqus_thread" data-disqus-identifier='ghost-{{comment_id}}'>Comments</a>
+                                        </span>
+                                        {{#if "tags"}}
+                                           <div class="tags">Categories {{tags separator=", "}}</div>
+                                        {{/if}}
+                                    </div>
+                                    <div class="post-image col-xs-12 col-md-12">
+                                        {{#if feature_image}}
+                                            <a href="{{url}}" alt="{{{title}}}" title="{{{title}}}"><img src="{{img_url feature_image}}" /></a>
+                                        {{else}}
+                                            <a href="{{url}}" alt="{{{title}}}" title="{{{title}}}"><img src="{{asset "images/no-image.jpg"}}" /></a>
+                                        {{/if}}
+                                        <br>
+                                        <div class="post-content-excerpt">
+                                        {{excerpt words="50"}}...
+                                        </div>
+                                        <a href="{{url}}" alt="{{{title}}}" title="{{{title}}}"><div class="post-content-readmore">Read more</div></a>
+                                        
+                                    </div> 
+                                    
+
+                                </article>
+                            </div>
+                        {{/foreach}}
+                {{pagination}}
+            </div>
+			
+		</div>
+        <div class="col-xs-12 col-md-4">    
+                        <div class="social-media-responsive cp-sidebar">
+                            <section class="widget">
+                                <span><h5>Social Media</h5></span>  <br><br><br>
+                                <a href="https://www.facebook.com/aptoide" target="_blank" title="Facebook"><img src="{{asset "images/facebook.png"}}" alt="Facebook"></a>
+                                <a href="https://www.youtube.com/user/aptoide" target="_blank" title="Youtube"><img src="{{asset "images/youtube.png"}}" alt="Youtube"></a>
+                                <a href="https://twitter.com/aptoide" target="_blank" title="Twitter"><img src="{{asset "images/twitter.png"}}" alt="Twitter"></a>
+                                <a href="https://www.instagram.com/aptoideteam" target="_blank" title="Instagram"><img src="{{asset "images/instagram.png"}}" alt="Instagram"></a>
+                                <a href="https://www.snapchat.com/add/aptoideteam" target="_blank" title="Snapchat"><img src="{{asset "images/snapchat.png"}}" alt="Snapchat"></a>
+                                <a href="https://plus.google.com/+AptoideOfficial" target="_blank" title="Google Plus"><img src="{{asset "images/google.png"}}" alt="Google Plus"></a>
+                            </section>
+                        </div>
+                    </div>
+        {{> sidebar}}
+        
+        </div>
+   
+		
+	
+</div>
+</section>

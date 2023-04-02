@@ -120,6 +120,12 @@ const data = {
       title: "Best Android Games of November",
       feature_image: "mobile.png",
       categories: ["Android Apss", "Android"],
+      featured: true,
+    },
+    {
+      title: "Best Android Games of November",
+      feature_image: "mobile.png",
+      categories: ["Android Apss", "Android"],
     },
   ],
 };
