@@ -11,6 +11,18 @@ handlebars.registerPartial(
   }
 );
 
+handlebars.registerPartial("post", fs.readFileSync("./post.hbs", "utf8"), {
+  extname: ".hbs",
+});
+
+handlebars.registerPartial(
+  "comments",
+  fs.readFileSync("./partials/comments.hbs", "utf8"),
+  {
+    extname: ".hbs",
+  }
+);
+
 handlebars.registerPartial(
   "sidebar",
   fs.readFileSync("./partials/sidebar.hbs", "utf8"),
@@ -112,22 +124,42 @@ handlebars.registerHelper("img_url", function (filename) {
 const template = handlebars.compile(source);
 
 // Define the data to pass to the template
+// const data = {
+//   title: "My Handlebars Project",
+//   url: "/aptoide-logo.svg",
+//   posts: [
+//     {
+//       title: "Best Android Games of November",
+//       feature_image: "mobile.png",
+//       categories: ["Android Apss", "Android"],
+//       featured: true,
+//     },
+//     {
+//       title: "Best Android Games of November",
+//       feature_image: "mobile.png",
+//       categories: ["Android Apss", "Android"],
+//     },
+//   ],
+// };
+
 const data = {
   title: "My Handlebars Project",
   url: "/aptoide-logo.svg",
-  posts: [
-    {
-      title: "Best Android Games of November",
-      feature_image: "mobile.png",
-      categories: ["Android Apss", "Android"],
-      featured: true,
+  post: {
+    title: "Testing title",
+    comment_id: "12121",
+    primary_author: {
+      url: "Testing url",
+      name: "Bruno Afonso",
     },
-    {
-      title: "Best Android Games of November",
-      feature_image: "mobile.png",
-      categories: ["Android Apss", "Android"],
+    feature_image: {
+      img_url:
+        "https://blog.aptoide.com/content/images/2016/10/app-store-business-model-revenue.jpg",
+      title: "Test title",
     },
-  ],
+    content:
+      "We download and even purchase apps on a daily basis, but do we ever care to think what goes behind the scenes of that process? Or do we even care about the players involved, granting that the whole process runs as smooth as possible? Lets go over some of the drivers of the app business revolution:",
+  },
 };
 
 // Render the template with the data

@@ -1,86 +1,58 @@
 {{!< default}}
 <section id="main-body">
 <div class="container">
-    
+    <div id="aptoide-small-title-container">
+		<span class="aptoide-blog-title" id="aptoide-small-title">Aptoide official</span>
+		<span class="aptoide-blog-title" id="aptoide-small-blog"> Blog</span>
+	</div>
 	<div class="row">
-        
-		<div class="col-md-8">
-            <div class="posts-card">
-			<article class="{{post_class}}">
+		<div class="col-xs-12 col-md-8">
+			<article class="post-article">
 				{{#post}}
 					<header class="post-header">
-						<h2>{{{title}}}</h2>
-                        <div>
-							<span class="date">
-								<i class="fa fa-clock-o"></i>
-								{{date format="MMM DD, YYYY"}}
-							</span>
-							<span class="comment">
-								<i class="fa fa-comment"></i>
-								<a href="{{url absolute="true"}}#disqus_thread" data-disqus-identifier='ghost-{{comment_id}}' style="color:#000">Comments</a>
-							</span>
-                        </div>
-						<div class="meta-info">
-							{{#primary_author}}
-							<span class="author">
-								<i class="fa fa-user"></i>
-								<a href="{{url}}">{{name}}</a>
-							</span>
-                            {{/primary_author}}
+						<h2 "post-card-title">{{{title}}}</h2>
+						<div class="container-row" id="published-row">
+							<span class="published-by">Published by </span>
+							<span class="published-by" id="who-published">The Aptoide Team</span>
+							<span id="publish-date">Jun 09, 2022</span>
 						</div>
-                        <br>
-						{{#if feature_image}}
-							<img class="featured-image" src="{{img_url feature_image}}" alt="{{{title}}}" title="{{{title}}}" />
-						{{else}}
-							<img class="featured-image" src="{{asset "images/no-image.jpg"}}" />
-						{{/if}}
-					</header>
-					
-					<section class="post-content">
-                        
-						  {{content}}
-                        
+						<img class="featured-image" src="https://blog.aptoide.com/content/images/2016/10/app-store-business-model-revenue.jpg" alt="{{{title}}}" title="{{{title}}}" />
+					</header>	
+					<section class="post-content">     
+						  If you’re looking to try out new and exciting games we've got you covered! Each week our editorial team tests out the most downloaded games at Aptoide and looks for those special ones to be featured in our Game of the Week. Here are last month's top downloaded games and just a few reasons why they should be on your "must-try" list of Android apps
 					</section>
-					
-					<footer class="post-footer">
+					<div class="post-footer">
 						{{#if "tags"}}
-						<section class="tags pull-left">
-							<i class="fa fa-tags"></i> {{tags separator=" | "}}
-						</section>
+							<div class="container-row">
+								{{#each tags}}
+									<div class="categories-tag">
+										{{this}}
+									</div>
+								{{/each}}
+							</div>
 						{{/if}}
-						
-						
-						<div class="clearfix"></div>
-						
-						{{> post-author}}
-						
-						<div class="clearfix"></div>
-						    <div class="posts-divider"></div>
-							<nav class="pull-right">
-								<div class="pagination">
-                            
-									{{#next_post}}
-									<a href="{{url}}" title="Back"><img src="{{asset "images/arrow.png"}}" alt="Back"></a>
-									{{/next_post}}
-									
-                                    <a href="{{@site.url}}" title="Home"><img src="{{asset "images/home.png"}}" alt="Home"></a>
-                                    
-									{{#prev_post}}
-									<a href="{{url}}" title="Next"><img src="{{asset "images/arrow-2.png"}}" alt="Next"></a>
-									{{/prev_post}}
-											
-								</div>
-							</nav>
+						<div id="post-categories" class="container-row">
+							<div class="categories-tag">
+								Android
+							</div>
+							<div class="categories-tag">
+								Android
+							</div>
+							<div class="categories-tag">
+								Android
+							</div>
+						</div>
+						<nav class="posts-pagination">
+							<a href="{{url}}" title="Back"><img src="{{asset "images/left-arrow.svg"}}" alt="Back"></a>
+							<a href="{{url}}" title="Next"><img src="{{asset "images/right-arrow.svg"}}" alt="Next"></a>				
+						</nav>
 								
-						<div class="clearfix"></div>
 						
 						{{> comments}}
 						
-					</footer>
+					</div>
 				{{/post}}
 			</article>
-		</div>
-		
 	</div>
          {{> sidebar}}
     </div>
